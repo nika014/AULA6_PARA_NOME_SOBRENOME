@@ -1,0 +1,65 @@
+algoritmo "CALCULATOR"
+//Faculdade de Tecnologia de Jahu - GTI - Noturno
+//Trabalho "Salva-vidas" - Professor Tiago Antônio da Silva
+//Nicolas Gabriel Garcez Fernandes Pinto
+//~03/04/2025
+
+var
+
+   numero, resultado: real
+   continuar, operador: caractere
+
+inicio
+
+   escreval("              ----------CALCULADORA----------")
+   escreval(" ")
+   escreval(" ")
+
+   repita
+
+      escreval("Digite o primeiro número: ")
+      leia(resultado)
+      escreval(" ")
+      escreval("Escolha a operação[+-*/]: ")
+      leia(operador)
+      escreval(" ")
+      escreval("Digite o segundo número: ")
+      leia(numero)
+
+      escolha operador
+
+      caso "+"
+         resultado <- resultado + numero
+
+      caso "-"
+         resultado <- resultado - numero
+
+      caso "*"
+         resultado <- resultado * numero
+
+      caso "/"
+         resultado <- resultado / numero
+
+      fimescolha
+
+      escreval(" ")
+
+      escreval("O resultado é: ")
+      escreval(resultado)
+
+      escreval(" ")
+
+      escreval("Continuar S/N")
+      leia(continuar)
+
+      se (continuar = "s") ou (continuar = "S") entao
+
+         limpatela
+
+      senao
+
+      fimse
+
+   ate (continuar = "n") ou (continuar = "N")
+
+fimalgoritmo
