@@ -1,0 +1,62 @@
+algoritmo "ALUNOS"
+
+var
+
+   nota_um, nota_dois, media: real
+   i: inteiro
+
+inicio
+
+   escreval("             +-----------------------------------+")
+   escreval("             ]    SISTEMA BIMESTRAL DE NOTAS     [")
+   escreval("             +-----------------------------------+")
+
+   para i de 1 ate 10 faça
+
+      repita
+         repita
+
+            escreval(" ")
+            escreval("Digite as duas notas do aluno ", i, " abaixo:")
+            escreval("-----------------------------------------")
+            leia(nota_um)
+            escreval("---")
+            leia(nota_dois)
+            escreval("---")
+
+            se (nota_um < 0) e (nota_um > 10) entao
+               escreval(" ")
+               escreval("Essa nota não existe!")
+
+               se (nota_dois < 0) e (nota_dois > 10) entao
+                  escreval(" ")
+                  escreval("Essa nota não existe!")
+
+               fimse
+            fimse
+
+         ate (nota_um >= 0) e (nota_um <= 10)
+      ate (nota_dois >= 0) e (nota_dois <= 10)
+
+
+      media <- (nota_um + nota_dois) / 2
+
+      se (media >= 5) entao
+         escreval("A média do aluno ", i, " é ", media)
+         escreval("---------------------------------")
+         escreval(" ")
+         escreval("Aluno ",i ," aprovado!")
+         escreval("--------------------")
+
+      senao
+         escreval("A média do aluno ", i, " é ", media)
+         escreval("---------------------------------")
+         escreval(" ")
+         escreval("Aluno ",i ," reprovado!")
+         escreval("---------------------")
+
+      fimse
+
+   fimpara
+
+fimalgoritmo
